@@ -1,0 +1,85 @@
+﻿@using System.Web.Optimization
+@model  ContactInfo.Web.ViewModel.ContactModel
+
+@{
+    ViewBag.Title = "ManageView";
+    Layout = "~/Views/_Layout.cshtml";
+}
+@Scripts.Render("~/bundles/js")
+<h3>List of all available contact information</h3><br />
+
+<div class="modal fade" id="CreateModal" tabindex="-1" role="dialog" aria-labelledby="CreateViewModal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="CreateViewModal">Create new contact information</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="clearValidation()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @Html.Partial("CreateView", Model)
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="UpdateModal" tabindex="-1" role="dialog" aria-labelledby="UpdateDataModal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="UpdateDataModal">Update Employee</h4>
+                <button type="button" class="close" data-dismiss="modal" onclick="clearValidation()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="Id">ID</label>
+                        <input type="text" class="form-control" id="ContInfoId" placeholder="Id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="FirstName">First Name</label>
+                        <input type="text" class="form-control" id="fName" placeholder="First Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName">Last Name</label>
+                        <input type="text" class="form-control" id="lName" placeholder="Last Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="text" class="form-control" id="emailId" placeholder="Email Id" />
+                    </div>
+                    <div class="form-group">
+                        <label for="PhoneNumber">Phone Number</label>
+                        <input type="text" class="form-control" id="phoneNo" placeholder="Phone Number" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="btnUpdate" style="display:none;" onclick="UpdateDetails();">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearValidation()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <b><a href="#" data-toggle="modal" data-target="#CreateModal">Add New Contact</a> &nbsp;&nbsp;&nbsp;&nbsp;<strong id='loader'>Loading...</strong></b>
+    </div>
+    <div class="panel-body" id="divContInfo">
+        <table class="table table-bordered" id="tblContInfo">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tblBody"></tbody>
+        </table>
+    </div>
+</div>
