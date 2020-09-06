@@ -22,7 +22,7 @@ Technology Used
 ```
     MVC - Layer Architecture
     .net framework 4.7.1
-    Entity Framework 6
+    Entity Framework 6 - Database First approach
     Unit testing - Nunit
     Unity for Dependancy Injection
     Web API
