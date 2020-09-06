@@ -58,4 +58,10 @@ GO
      > Data access layer - DataAccessComponent
      > Bussiness acess layer - BussinessComponent
      > Unit testing - UnitTestsComponent
-  
+   ![Folder Structure](https://github.com/AjitSakhare/MVC_WebAPI_App/blob/WebAppContInfo/layedArchitecture.PNG)
+   
+    MVC proejct Structure
+   ![MVC Folder Structure](https://github.com/AjitSakhare/MVC_WebAPI_App/blob/WebAppContInfo/MVC%20structure.PNG)
+   
+    Home page
+   ![Home Page](https://github.com/AjitSakhare/MVC_WebAPI_App/blob/WebAppContInfo/Home%20page.PNG)
