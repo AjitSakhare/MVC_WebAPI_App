@@ -23,6 +23,7 @@ Technology Used
     MVC - Layer Architecture
     .net framework 4.7.1
     Entity Framework 6 - Database First approach
+    Nlog for logging error - Text File
     Unit testing - Nunit
     Unity for Dependancy Injection
     Web API
@@ -65,3 +66,18 @@ GO
    
     Home page
    ![Home Page](https://github.com/AjitSakhare/MVC_WebAPI_App/blob/WebAppContInfo/Home%20page.PNG)
+    
+    No/Zero Record Found
+   ![Zero Record](https://github.com/AjitSakhare/MVC_WebAPI_App/blob/WebAppContInfo/No%20Records%20foudn.PNG)
+   
+    Validation 
+   ![Validation](https://github.com/AjitSakhare/MVC_WebAPI_App/blob/WebAppContInfo/validation.PNG)
+    
+    Record Added
+   ![Record](https://github.com/AjitSakhare/MVC_WebAPI_App/blob/WebAppContInfo/rcord%20added.PNG)
+   
+    Email & Phone number Validation 
+   ![Email&Phone](https://github.com/AjitSakhare/MVC_WebAPI_App/blob/WebAppContInfo/phone%20number%20email%20id%20validation.PNG)
+   	
+    UpdateScreen
+   ![Update](https://github.com/AjitSakhare/MVC_WebAPI_App/blob/WebAppContInfo/update%20record.PNG)
