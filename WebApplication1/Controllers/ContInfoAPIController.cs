@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ContactInfo.Web.Controllers
 {
@@ -28,6 +29,7 @@ namespace ContactInfo.Web.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("SaveInformation")]
+        [EnableCors(origins: "*", headers: "*", methods: "POST")]
         public HttpResponseMessage InsertDetails(ContactModel contactModel)
         {
             try
@@ -82,6 +84,7 @@ namespace ContactInfo.Web.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("GetAllInfoList")]
+        [EnableCors(origins: "*", headers: "*", methods: "GET")]
         public HttpResponseMessage GetAllInfoList()
         {
             try
@@ -107,6 +110,7 @@ namespace ContactInfo.Web.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("EditContDetails")]
+        [EnableCors(origins: "*", headers: "*", methods: "GET")]
         public HttpResponseMessage EditDetails(int id)
         {
             try
@@ -129,6 +133,7 @@ namespace ContactInfo.Web.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("DeleteContDetails")]
+        [EnableCors(origins: "*", headers: "*", methods: "POST")]
         public HttpResponseMessage DeleteRecord(int id)
         {
             try
@@ -150,6 +155,7 @@ namespace ContactInfo.Web.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("UpdateContDetails")]
+        [EnableCors(origins: "*", headers: "*", methods: "POST")]
         public HttpResponseMessage UpdateDetails(ContactModel contactModel)
         {
             try
